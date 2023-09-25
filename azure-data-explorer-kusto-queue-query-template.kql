@@ -1,0 +1,10 @@
+.export  
+    async 
+    to csv ( h@"https://XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" )
+    with ( includeHeaders="all" )
+<|
+set truncationmaxsize = 1000000000; 
+let start_time = "<START_DATETIME_STRING>";
+let end_time = "<END_DATETIME_STRING>";
+sampledata 
+| where StartTime between (todatetime(start_time) .. todatetime(end_time))
